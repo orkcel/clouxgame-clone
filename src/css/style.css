@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.active {
+    pointer-events: all !important;
+    opacity: 1 !important;
+}
+
+.site-wrapper {
+    background-color: darkgray;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin: 0 auto;
+    font-family: "Poppins", sans-serif;
+
+    header {
+        display: flex;
+        width: 100%;
+        padding: 30px 0 15px;
+
+        .header-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1270px;
+            margin: 0 auto;
+            gap: 250px;
+            padding: 0 15px;
+            color: #fff;
+
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            width: 100%;
+
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: end;
+
+
+            width: 100%;
+
+
+            .nav-elements-container {
+                display: flex;
+                justify-content: end;
+
+                .nav-elements {
+                    list-style-type: none;
+                    display: flex;
+                    gap: 15px;
+                }
+
+                .user-box {
+                    display: flex;
+                }
+
+
+            }
+
+            .nav-links-container {
+                display: flex;
+                justify-content: end;
+
+                .nav-links {
+                    list-style-type: none;
+                    display: flex;
+
+                    li {
+                        padding: 15px;
+                        font-size: 13px;
+                        white-space: nowrap;
+                        position: relative;
+                        cursor: pointer;
+
+
+                        .dropdown-container {
+                            display: flex;
+                            flex-direction: column;
+                            position: absolute;
+                            background-color: white;
+                            width: 212px;
+                            padding-top: 10px;
+                            left: 0;
+                            top: 50px;
+                            z-index: 3;
+                            opacity: 0;
+                            transition: opacity 0.2s ease;
+                            pointer-events: none;
+                            border: 1px solid rgba(128, 128, 128, 0.300);
+                            border-top: 2px solid yellow;
+
+                            li {
+                                width: 100%;
+                                color: black;
+                                list-style: none;
+                                cursor: pointer;
+                                position: relative;
+
+                                h4 {
+                                    font-weight: 400;
+                                    transition: color 0.2s ease;
+                                }
+
+                                &:not(:last-child) {
+                                    border-bottom: 1px solid rgba(128, 128, 128, 0.300);
+                                }
+
+                                &:hover {
+                                    h4 {
+                                        color: yellow;
+                                    }
+
+                                }
+
+                                .inner-dropdown {
+                                    width: 180px;
+                                    display: flex;
+                                    flex-direction: column;
+                                    position: absolute;
+                                    right: -180px;
+                                    top: -12px;
+                                    background-color: white;
+                                    padding-top: 10px;
+                                    border: 1px solid rgba(128, 128, 128, 0.300);
+                                    transition: opacity 0.2s ease;
+                                    opacity: 0;
+                                    pointer-events: none;
+                                    border-top: 2px solid yellow;
+
+                                    p {
+                                        padding: 15px;
+                                        width: 100%;
+                                        transition: color 0.2s ease;
+
+                                        &:not(:last-child) {
+                                            border-bottom: 1px solid rgba(128, 128, 128, 0.300);
+                                        }
+
+                                        &:hover {
+                                            color: yellow;
+                                        }
+                                    }
+
+                                }
+
+                                &:hover {
+                                    .inner-dropdown {
+                                        pointer-events: all;
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+
+                        &:hover {
+                            .dropdown-container {
+                                opacity: 1;
+                                pointer-events: all;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
