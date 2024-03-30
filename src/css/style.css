@@ -37,6 +37,10 @@
 
         }
 
+        &:hover {
+            color: #ffc311;
+        }
+
         .logo-container {
             display: flex;
             align-items: center;
@@ -57,15 +61,47 @@
             .nav-elements-container {
                 display: flex;
                 justify-content: end;
+                max-height: 28px;
+                width: 100%;
 
                 .nav-elements {
                     list-style-type: none;
                     display: flex;
+                    align-items: center;
+                    justify-content: end;
                     gap: 15px;
+                    cursor: pointer;
+
+                    li {
+
+                        cursor: pointer;
+
+                        i {
+
+                            &:hover {
+                                color: #ffc311;
+                            }
+                        }
+                    }
                 }
 
                 .user-box {
                     display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 2px;
+                    margin-left: 30px;
+                    padding: 10px;
+                    border: 1px solid #ffc311;
+                    background-color: #ffc311;
+                    border-radius: 1.9230rem;
+                    cursor: pointer;
+
+                    p {
+                        font-size: 10px;
+                        text-transform: uppercase
+                    }
+
                 }
 
 
@@ -86,6 +122,12 @@
                         position: relative;
                         cursor: pointer;
 
+                        &:hover {
+
+                            li {
+                                color: #ffc311;
+                            }
+                        }
 
                         .dropdown-container {
                             display: flex;
@@ -101,7 +143,7 @@
                             transition: opacity 0.2s ease;
                             pointer-events: none;
                             border: 1px solid rgba(128, 128, 128, 0.300);
-                            border-top: 2px solid yellow;
+                            border-top: 2px solid #ffc311;
 
                             li {
                                 width: 100%;
@@ -120,8 +162,9 @@
                                 }
 
                                 &:hover {
+
                                     h4 {
-                                        color: yellow;
+                                        color: #ffc311;
                                     }
 
                                 }
@@ -139,7 +182,7 @@
                                     transition: opacity 0.2s ease;
                                     opacity: 0;
                                     pointer-events: none;
-                                    border-top: 2px solid yellow;
+                                    border-top: 2px solid #ffc311;
 
                                     p {
                                         padding: 15px;
@@ -151,7 +194,7 @@
                                         }
 
                                         &:hover {
-                                            color: yellow;
+                                            color: #ffc311;
                                         }
                                     }
 
@@ -167,6 +210,7 @@
                         }
 
                         &:hover {
+
                             .dropdown-container {
                                 opacity: 1;
                                 pointer-events: all;
@@ -175,6 +219,7 @@
                     }
 
                 }
+
             }
         }
     }
